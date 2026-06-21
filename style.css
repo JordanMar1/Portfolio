@@ -1,0 +1,215 @@
+:root {
+    --accent: 124, 58, 237;
+    --accent-d: 167, 139, 250;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: color-mix(in srgb, rgb(var(--accent)) 5%, #f4f7f6);
+    color: #333;
+    padding: 20px;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+.project-tabs {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: 2px solid var(--btn-color, #7c3aed);
+    background-color: white;
+    color: var(--btn-color, #7c3aed);
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+.tab-btn:hover,
+.tab-btn.active {
+    background-color: var(--btn-color, #7c3aed);
+    color: white;
+}
+
+.btn-link {
+    display: inline-block;
+    margin-top: 15px;
+    color: rgba(var(--accent), 0.75);
+    text-decoration: none;
+}
+
+#project-container {
+    background: color-mix(in srgb, rgb(var(--accent)) 4%, white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    margin: 0 auto;
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease;
+}
+
+.project-card img {
+    width: 48%;
+    height: auto;
+    display: inline-block;
+    margin: 5px 1%;
+}
+
+.project-card h2 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.slider-track {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+.slider-track img {
+    width: 100%;
+    flex-shrink: 0;
+    cursor: zoom-in;
+    height: auto;
+}
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 4px;
+    z-index: 1;
+}
+.slider-btn.prev {
+    left: 8px;
+}
+.slider-btn.next {
+    right: 8px;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: zoom-out;
+}
+.lightbox.open {
+    display: flex;
+}
+.lightbox img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+}
+
+#toggle-dark {
+    background: none;
+    border: 2px solid #3498db;
+    border-radius: 20px;
+    padding: 6px 14px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+body.dark {
+    background-color: color-mix(in srgb, rgb(var(--accent-d)) 8%, #1a1a2e);
+    color: #e0e0e0;
+}
+body.dark #project-container {
+    background: color-mix(in srgb, rgb(var(--accent-d)) 10%, #16213e);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .lightbox {
+    background: rgba(0, 0, 0, 0.95);
+}
+
+body.dark .theme-extension p {
+    color: #d1d5db;
+}
+
+body.dark .tab-btn {
+    background-color: #16213e;
+    color: var(--btn-color-dark, #a78bfa);
+    border-color: var(--btn-color-dark, #a78bfa);
+}
+body.dark .tab-btn.active,
+body.dark .tab-btn:hover {
+    background-color: var(--btn-color-dark, #a78bfa);
+    color: #16213e;
+}
+
+body.dark #toggle-dark {
+    border-color: rgba(var(--accent-d), 0.9);
+}
+body.dark .btn-link {
+    color: rgba(var(--accent-d), 0.9);
+}
+body.dark .theme-extension {
+    background: linear-gradient(135deg, #1e1b2e, #2d1f5e);
+    border-left-color: rgba(var(--accent-d), 1);
+}
+body.dark .theme-extension h2 {
+    color: color-mix(in srgb, rgb(var(--accent-d)) 80%, white);
+    border-bottom-color: #3d2f6e;
+}
+body.dark .theme-extension ul {
+    background: #2d1f5e;
+    color: color-mix(in srgb, rgb(var(--accent-d)) 80%, white);
+}
+body.dark .theme-extension .slider-btn {
+    background: rgba(var(--accent-d), 0.75);
+}
+body.dark .theme-extension .slider-btn:hover {
+    background: rgba(var(--accent-d), 1);
+}
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #6b7280;
+    border-radius: 10px;
+    background-color: color-mix(in srgb, rgb(var(--accent)) 4%, white);
+    border-top: 1px solid color-mix(in srgb, rgb(var(--accent)) 12%, white);
+    transition:
+        background-color 0.4s ease,
+        color 0.4s ease,
+        border-color 0.4s ease;
+}
+body.dark footer {
+    color: #9ca3af;
+    background-color: color-mix(in srgb, rgb(var(--accent-d)) 10%, #16213e);
+    border-top-color: color-mix(in srgb, rgb(var(--accent-d)) 15%, #16213e);
+}

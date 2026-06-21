@@ -1,0 +1,44 @@
+[
+  {
+    "id": "myworld/myworld",
+    "label": "My World",
+    "css": "projets/myworld/style.css",
+    "color": "#166534",
+    "colorDark": "#14532d"
+  },
+  {
+    "id": "pokeguessr/pokeguessr",
+    "label": "Pokeguessr",
+    "css": "projets/pokeguessr/style.css",
+    "color": "#b45309",
+    "colorDark": "#fcd34d"
+  },
+  {
+    "id": "poulerornot/poulerornot",
+    "label": "Pouler Engine",
+    "css": "projets/poulerornot/style.css",
+    "color": "#b91c1c",
+    "colorDark": "#f87171"
+  },
+  {
+    "id": "extension/extension",
+    "label": "Extension Zed",
+    "css": "projets/extension/style.css",
+    "color": "#7c3aed",
+    "colorDark": "#a78bfa"
+  },
+  {
+    "id": "brawlguessr/brawlguessr",
+    "label": "Brawlguessr",
+    "css": "projets/brawlguessr/style.css",
+    "color": "#2563eb",
+    "colorDark": "#93c5fd"
+  },
+  {
+    "id": "overthewire/overthewire",
+    "label": "Overthewire Bandit",
+    "css": "projets/overthewire/style.css",
+    "color": "#16a34a",
+    "colorDark": "#86efac"
+  }
+]
