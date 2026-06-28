@@ -40,5 +40,12 @@
     "css": "projets/overthewire/style.css",
     "color": "#16a34a",
     "colorDark": "#86efac"
+  },
+  {
+    "id": "spectrumchat/spectrumchat",
+    "label": "Spectrumchat",
+    "css": "projets/spectrumchat/style.css",
+    "color": "#c2410c",
+    "colorDark": "#fb923c"
   }
 ]
